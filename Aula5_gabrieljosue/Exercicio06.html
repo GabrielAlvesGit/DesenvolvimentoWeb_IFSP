@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Carta</title>
+</head>
+<body>
+
+<script>
+    // Definindo a classe Carta
+    function Carta(Pnumero, Pnaipe) {
+        this.numero = Pnumero;
+        this.naipe = Pnaipe;
+    }
+
+    // Método para exibir as informações da carta
+    Carta.prototype.exibir = function() {
+        var infoCarta = this.numero + ' de ' + this.naipe;
+        document.write("<p>" + infoCarta + "</p>");
+    };
+
+    // Criando uma instância da classe Carta e exibindo suas informações
+    var cartaExemplo = new Carta("Ás", "Copas");
+    cartaExemplo.exibir();
+</script>
+
+</body>
+</html>

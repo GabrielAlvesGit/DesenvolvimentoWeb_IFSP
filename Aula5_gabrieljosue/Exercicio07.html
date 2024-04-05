@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de Objetos Carta</title>
+</head>
+<body>
+
+<h1>Objetos Armazenados no Array</h1>
+
+<div id="container"></div>
+
+<script>
+    // Definindo a classe Carta
+    function Carta(Pnumero, Pnaipe) {
+        this.numero = Pnumero;
+        this.naipe = Pnaipe;
+    }
+
+    // Método para exibir as informações da carta
+    Carta.prototype.exibir = function() {
+        return this.numero + ' de ' + this.naipe;
+    };
+
+    // Criando um array de objetos Carta e inicializando com alguns objetos
+    var arrayCartas = [
+        new Carta("Ás", "Copas"),
+        new Carta("Rei", "Paus"),
+        new Carta("Dama", "Ouros")
+    ];
+
+    // Exibindo os objetos armazenados no array na página HTML
+    var container = document.getElementById("container");
+    arrayCartas.forEach(function(carta) {
+        var paragrafo = document.createElement("p");
+        paragrafo.textContent = carta.exibir();
+        container.appendChild(paragrafo);
+    });
+</script>
+
+</body>
+</html>

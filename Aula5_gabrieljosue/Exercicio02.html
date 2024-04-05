@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio02</title>
+</head>
+<body>
+
+    <script>
+         function Livro(titulo, autor, totalDePaginas){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.totalDePaginas = totalDePaginas;
+        this.paginaAtual = 0;
+        }
+
+        var biblioteca = [
+            new Livro("O Poder do Hábito", "Charles Duhigg", 500),
+            new Livro("Crepusculo", "Stephenie Meyer", 500),
+            new Livro("Pai pobre e pai rico", "RB", 250)
+        ];
+
+        alert(JSON.stringify(biblioteca));
+        document.write("<br>");
+    </script>
+    
+
+
+
+    /<!--
+
+
+        ver depois // Definindo o objeto Livro
+function Livro(titulo, autor, totalDePaginas) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.totalDePaginas = totalDePaginas;
+    this.paginaAtual = 0;
+}
+
+// Criando um array de objetos Livro e inicializando com alguns objetos
+var biblioteca = [
+    new Livro("Dom Casmurro", "Machado de Assis", 300),
+    new Livro("O Pequeno Príncipe", "Antoine de Saint-Exupéry", 100),
+    new Livro("Harry Potter e a Pedra Filosofal", "J.K. Rowling", 400)
+];
+
+// Exibindo o array de livros
+console.log(biblioteca);
+
+    -->
+</body>
+</html>

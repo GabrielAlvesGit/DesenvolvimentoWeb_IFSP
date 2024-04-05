@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Métodos da Classe Math</title>
+</head>
+<body>
+
+<h1>Métodos da Classe Math</h1>
+
+<p>Vamos demonstrar cinco métodos da classe Math:</p>
+
+<ul>
+    <li>Math.sqrt(): Retorna a raiz quadrada de um número.</li>
+    <li>Math.random(): Retorna um número pseudo-aleatório entre 0 e 1.</li>
+    <li>Math.floor(): Retorna o maior número inteiro menor ou igual a um número.</li>
+    <li>Math.ceil(): Retorna o menor número inteiro maior ou igual a um número.</li>
+    <li>Math.round(): Retorna o valor de um número arredondado para o inteiro mais próximo.</li>
+</ul>
+
+<script>
+    // Método 1: Math.sqrt()
+    var numero = 25;
+    document.write("<p>A raiz quadrada de " + numero + " é: " + Math.sqrt(numero) + "</p>");
+
+    // Método 2: Math.random()
+    var numeroAleatorio = Math.random();
+    document.write("<p>Número pseudo-aleatório entre 0 e 1: " + numeroAleatorio + "</p>");
+
+    // Método 3: Math.floor()
+    var numeroDecimal = 8.9;
+    document.write("<p>O maior número inteiro menor ou igual a " + numeroDecimal + " é: " + Math.floor(numeroDecimal) + "</p>");
+
+    // Método 4: Math.ceil()
+    var numeroDecimal2 = 8.1;
+    document.write("<p>O menor número inteiro maior ou igual a " + numeroDecimal2 + " é: " + Math.ceil(numeroDecimal2) + "</p>");
+
+    // Método 5: Math.round()
+    var numeroParaArredondar = 7.49;
+    document.write("<p>O valor de " + numeroParaArredondar + " arredondado para o inteiro mais próximo é: " + Math.round(numeroParaArredondar) + "</p>");
+</script>
+
+</body>
+</html>

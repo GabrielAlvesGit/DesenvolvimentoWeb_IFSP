@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio01</title>
+</head>
+<body>
+
+    <script>
+
+    // Solicitar ao usuário que insira os detalhes do livro
+    var titulo = prompt("Insira o título do livro:");
+    var autor = prompt("Insira o autor do livro:");
+    var totalDePaginas = parseInt(prompt("Insira o total de páginas do livro:"));
+
+    // Criar uma instância do objeto Livro com os detalhes fornecidos pelo usuário
+    var meuLivro = new Livro(titulo, autor, totalDePaginas);
+
+    // Solicitar ao usuário que insira a página atual
+    var paginaAtual = parseInt(prompt("Insira a página atual que você está lendo:"));
+    
+
+    function Livro(titulo, autor, totalDePaginas) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.totalDePaginas = totalDePaginas;
+    this.paginaAtual = 0;
+
+    // Método para calcular o progresso de leitura
+    this.progressoDeLeitura = function(paginaAtual) {
+        // Atualiza a página atual
+        this.paginaAtual = paginaAtual;
+        
+        // Calcula a porcentagem de leitura
+        var porcentagem = (this.paginaAtual / this.totalDePaginas) * 100;
+        return porcentagem.toFixed(2) + '%';
+        };
+    }
+
+
+    // Verificar se a página inserida é válida
+    if (paginaAtual >= 0 && paginaAtual <= meuLivro.totalDePaginas) {
+        // Calcular e exibir o progresso de leitura
+        var porcentagem = meuLivro.progressoDeLeitura(paginaAtual);
+        alert("O Livro " + titulo + " autor " + autor + " Esta em progresso de leitura: " + porcentagem);
+    } else {
+        alert("Número de página inválido!");
+    }
+
+    </script>
+    
+</body>
+</html>

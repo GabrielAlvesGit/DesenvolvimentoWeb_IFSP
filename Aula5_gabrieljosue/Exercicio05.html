@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data de Hoje</title>
+</head>
+<body>
+
+<h1>Data de Hoje</h1>
+
+<p>A data de hoje é:</p>
+
+<p id="dataAtual"></p>
+
+<script>
+    // Obtendo a data de hoje
+    var data = new Date();
+
+    // Formatando a data para dd/mm/aaaa
+    var dia = data.getDate().toString().padStart(2, '0');
+    var mes = (data.getMonth() + 1).toString().padStart(2, '0');
+    var ano = data.getFullYear();
+
+    // Exibindo a data formatada na página
+    document.getElementById("dataAtual").textContent = dia + '/' + mes + '/' + ano;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Livros</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Total de Páginas</th>
+            <th>Página Atual</th>
+            <th>Progresso (%)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+            function Livro(titulo, autor, totalDePaginas, paginaAtual) {
+                this.titulo = titulo;
+                this.autor = autor;
+                this.totalDePaginas = totalDePaginas;
+                this.paginaAtual = paginaAtual;
+                this.progresso = Math.round((paginaAtual / totalDePaginas) * 100);
+            }
+
+            var biblioteca = [
+                new Livro("O Poder do Hábito", "Charles Duhigg", 500, 200),
+                new Livro("Crepúsculo", "Stephenie Meyer", 500, 250),
+                new Livro("Pai Rico, Pai Pobre", "Robert T. Kiyosaki", 250, 125)
+            ];
+
+            biblioteca.forEach(function(livro) {
+                document.write("<tr>");
+                document.write("<td>" + livro.titulo + "</td>");
+                document.write("<td>" + livro.autor + "</td>");
+                document.write("<td>" + livro.totalDePaginas + "</td>");
+                document.write("<td>" + livro.paginaAtual + "</td>");
+                document.write("<td>" + livro.progresso + "%</td>");
+                document.write("</tr>");
+            });
+        </script>
+    </tbody>
+</table>
+
+</body>
+</html>
