@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio05</title>
+</head>
+<body>
+ 
+   <!-- Function Arrow -->
+  <script>
+   var conjunto1 = [10, 20, 30, 40, 50];
+
+   var calcularMedia = (numeros) => {
+    var soma = numeros.reduce((acc, num) => acc + num, 0);
+    return soma / numeros.length;
+   }
+
+   console.log(`Média do conjunto 1: ${calcularMedia(conjunto1)}`);
+  </script>
+
+</body>
+</html>

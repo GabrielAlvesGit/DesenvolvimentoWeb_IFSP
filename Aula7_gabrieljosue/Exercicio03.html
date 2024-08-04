@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio03</title>
+</head>
+<body>
+ 
+   <!-- Function Arrow -->
+  <script>
+    var carrinho = [
+      { nome: 'abacaxi', preco: '2.00' },
+      { nome: 'detergente', preco: '2.50' },
+      { nome: 'bolacha', preco: '3.80' }
+    ];
+   
+    var imprimirProduto = (nome, preco) => {
+      console.log(`Produto: ${nome} | Preço: ${preco}`);
+    };
+
+    carrinho.forEach(produto => imprimirProduto(produto.nome, produto.preco));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio01</title>
+</head>
+<body>
+  
+  <!-- Function Comum -->
+  <script>
+   var nomeUsuario = prompt("Digite seu nome: ");
+   var idadeUsuario = prompt("Digite sua idade: ");
+
+    function exibirDadosUsuarioDigitado(nome, idade){
+      console.log(`Olá ${nome}, tenho ${idade} anos!`);
+    }
+
+    exibirDadosUsuarioDigitado(nomeUsuario, idadeUsuario);
+  </script>
+ 
+   <!-- Function Arrow -->
+  <script>
+    const nomeUsuario = prompt("Digite seu nome: ");
+    const idadeUsuario = prompt("Digite sua idade: ");
+
+    const exibirDadosUsuarioDigitado = (nome, idade) => {
+      console.log(`Olá ${nome}, tenho ${idade} anos!`);
+    }
+
+    exibirDadosUsuarioDigitado(nomeUsuario, idadeUsuario);
+  </script>
+
+</body>
+</html>
